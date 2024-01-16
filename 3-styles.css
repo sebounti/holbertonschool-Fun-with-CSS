@@ -1,0 +1,39 @@
+/* Animation de base pour le bouton du menu */
+.menu-open-button {
+  transition: transform 0.4s ease;
+}
+
+/* Rotation du bouton lorsqu'il est cliqué */
+.menu-open:checked + .menu-open-button {
+  transform: rotate(45deg);
+}
+
+/* Base pour les éléments du menu - initialement positionnés plus haut */
+.menu-item {
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  transform: translateY(-20px); /* Les éléments commencent plus haut */
+}
+
+/* Animation des éléments du menu lors de l'ouverture */
+.menu-open:checked ~ .menu-item {
+  opacity: 1;
+  transform: translateY(20px); /* Les éléments se déplacent vers le bas */
+}
+
+/* Vous pouvez ajuster le délai de transition pour chaque élément du menu */
+.menu-open:checked ~ .menu-item:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.menu-open:checked ~ .menu-item:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.menu-open:checked ~ .menu-item:nth-child(3) {
+  transition-delay: 0.3s;
+}
+.menu-open:checked ~ .menu-item:nth-child(4) {
+  transition-delay: 0.4s;
+}
+.menu-open:checked ~ .menu-item:nth-child(5) {
+  transition-delay: 0.5s;
+}
