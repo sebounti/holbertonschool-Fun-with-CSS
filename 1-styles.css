@@ -1,0 +1,15 @@
+H2  {
+  color:black
+}
+
+a {
+  color: rgb(186, 27, 27);
+  text-decoration: none;
+  background: linear-gradient(to top, rgb(186, 27, 27) 0%, rgb(186, 27, 27) 3px, transparent 3px)no-repeat;
+  background-size: 0 100%;
+  transition: background-size 0.3s;
+}
+
+a:hover {
+  background-size: 100% 100%;
+}
