@@ -1,0 +1,79 @@
+/* Style de base pour le conteneur de l'interrupteur */
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 150px; /* Largeur de l'interrupteur */
+  height: 45px; /* Hauteur de l'interrupteur */
+  background-color: #ccc; /* Couleur de fond lorsque l'interrupteur est désactivé */
+  border-radius: 34px; /* Rayon de bordure pour arrondir les coins */
+  transition: background-color 0.2s; /* Transition pour l'effet d'animation */
+  margin-top: 100px;
+  margin-left: 100px;
+}
+
+/* Masquer la case à cocher réelle */
+.toggle-cb {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Style pour la partie interne de l'interrupteur */
+.toggle-label .toggle-inner {
+  position: absolute;
+  top: 2px; /* Espace depuis le haut */
+  left: 2px; /* Espace depuis la gauche */
+  right: 2px; /* Espace depuis la droite */
+  bottom: 2px; /* Espace depuis le bas */
+  background-color: rgb(207, 205, 205); /* Couleur de fond de l'interrupteur */
+  border-radius: 30px; /* Rayon de bordure pour arrondir les coins */
+  border: 1px solid #909090;
+  transition: all 0.2s; /* Transition pour l'animation */
+}
+
+/* Style pour le texte NO */
+.toggle-label .toggle-inner::before {
+  content: "YES";
+  position: absolute;
+  top: 25%;
+  left: 10%;
+  font-weight: bold;
+  font-size: 25px;
+  color: #ffffff;
+  opacity: 0.7;
+  }
+
+  /* Style pour le texte YES */
+  .toggle-label .toggle-inner::after {
+  content: "NO";
+  position: absolute;
+  top: 25%;
+  left: 90px;
+  font-size: 25px;
+  font-weight: bold;
+  color: #7c7e7c;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+  }
+
+/* Style pour le levier de l'interrupteur */
+.toggle-label .toggle-switch {
+  position: absolute;
+  top: -10px; /* Déplacer vers le centre verticalement */
+  left: 4px;
+  width: 65px; /* Largeur du levier */
+  height: 65px; /* Hauteur du levier */
+  background-color: #f9f2f2; /* Couleur de fond du levier */
+  border-radius: 50%; /* Rayon de bordure pour rendre le levier circulaire */
+  transition: all 0.2s; /* Transition pour l'animation */
+  border: 1px solid #999292;
+
+}
+
+/* Changement de style lorsque l'interrupteur est activé */
+.toggle-cb:checked + .toggle-label .toggle-inner {
+  background-color: #e81515; /* Nouvelle couleur de fond pour l'interrupteur activé */
+}
+
+.toggle-cb:checked + .toggle-label .toggle-switch {
+  transform: translateX(85px); /* Déplacement du levier vers la droite et garder le centre verticalement */}
