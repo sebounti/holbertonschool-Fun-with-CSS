@@ -1,0 +1,59 @@
+body{
+  height: 600px;
+  width: 100%;
+  padding-top: 70px
+}
+
+
+ul {
+  display: flex;
+  flex-direction: row;
+  align-items:flex-start;
+  justify-content: space-around;
+  text-align: center;
+
+}
+
+li {
+  list-style: none;
+  font-size: 45px;
+  font-weight: bold;
+  padding-right: 80px;
+  height: 485px;
+  width: 200px;
+  border: 1px solid black;
+  border-radius: 20px;
+  padding-top: 50px;
+
+}
+
+.icon {
+  display: inline-block;
+  height: 100px;
+  width: 120px; /* Height of the icon */
+  display: block;
+  background-image: url(images/0-sprite.png);
+  background-repeat: no-repeat;
+  margin-top: 50px;
+}
+
+.i-html {
+  height: 380px;
+  width: 280px;
+  border-radius: 20px;
+  background-position: left-top;
+}
+
+.i-css {
+  height: 380px;
+  width: 280px;
+  border-radius: 20px;
+  background-position: 50% top;
+}
+
+.i-js {
+  height: 380px;
+  width: 280px;
+  border-radius: 20px;
+  background-position:100% top;
+}
